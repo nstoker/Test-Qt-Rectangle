@@ -13,33 +13,40 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">        * {
+        background-color: white;
+        }
+
+        QPushButton {
+        color: white;
+        background-color: #3eb5f0; /*#58c8ff; /*#029bd5;*/
+        border-width: 0;
+        border-style: solid;
+        border-radius: 8;
+        padding: 3px;
+        padding-left: 5px;
+        padding-right: 5px;
+        font: bold 11pt &amp;quot;Open Sans&amp;quot;;
+        min-width: 70px;
+        min-height: 28px;
+        width: 110px;
+        margin-bottom: 4px;
+        }
+
+        QPushButton:pressed {
+        padding-left: 6px;
+        padding-right: 4px;
+        padding-top: 4px;
+        padding-bottom: 2px;
+        }
+
+        QPushButton:disabled {
+        /*color:transparent;*/
+        color: rgba(255,255,255,33%);
+        }</string>
+  </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>230</x>
-      <y>190</y>
-      <width>158</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>230</x>
-      <y>150</y>
-      <width>158</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
    <widget class="QWidget" name="horizontalLayoutWidget_2">
     <property name="geometry">
      <rect>
@@ -60,10 +67,45 @@
      <item>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="QRectangle" name="rectangle1" native="true">
+        <widget class="QWidget" name="widget" native="true">
          <property name="styleSheet">
-          <string notr="true">background-color: #4b525c</string>
+          <string notr="true">background-color:#4b525c</string>
          </property>
+         <widget class="QWidget" name="verticalLayoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>10</y>
+            <width>160</width>
+            <height>54</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <property name="sizeConstraint">
+            <enum>QLayout::SetNoConstraint</enum>
+           </property>
+           <item>
+            <widget class="QPushButton" name="pushButton">
+             <property name="styleSheet">
+              <string notr="true">background-color: #8c8c8c;</string>
+             </property>
+             <property name="text">
+              <string>PushButton</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_2">
+             <property name="styleSheet">
+              <string notr="true">background-color: #8c8c8c;</string>
+             </property>
+             <property name="text">
+              <string>PushButton 2</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
         </widget>
        </item>
       </layout>
@@ -92,13 +134,6 @@
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <customwidgets>
-  <customwidget>
-   <class>QRectangle</class>
-   <extends>QWidget</extends>
-   <header>qrect.h</header>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>
